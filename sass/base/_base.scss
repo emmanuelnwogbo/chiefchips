@@ -17,11 +17,12 @@ html {
 body {
   box-sizing: border-box;
   padding: 3.5rem;
+  min-height: 100vh;
   overflow-x: hidden;
-  background: #ffcf3b !important;
+  background: #ffcf3b;
   font-family: Arial, Helvetica, sans-serif;
 
   @media only screen and (max-width: 320px) {
-    background: blue;
+    background: red;
   }
 }
