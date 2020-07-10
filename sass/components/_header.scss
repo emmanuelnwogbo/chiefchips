@@ -3,3 +3,40 @@
   src: url("../../fonts/helvetica_bold.ttf") format("opentype");
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fee600;
+  height: 7.5rem;
+  padding: 2rem 3rem;
+
+  &__logo {
+    height: 15rem;
+    width: 15rem;
+    transform: translate(-3.8rem, 1rem);
+
+    & img {
+      object-fit: cover;
+      display: block;
+      height: 14rem;
+      width: 14rem;
+    }
+  }
+
+  &__menu {
+    &--mobile {
+      display: flex;
+      flex-direction: column;
+
+      & span {
+        height: 0.6rem;
+        width: 4rem;
+        border-radius: 3rem;
+        background: #000000;
+        display: inline-block;
+        margin: 0.3rem 0;
+      }
+    }
+  }
+}
