@@ -7,6 +7,12 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 40.5%; } }
+  @media only screen and (max-width: 500px) {
+    html {
+      font-size: 40.5%; } }
   @media only screen and (max-width: 320px) {
     html {
       font-size: 28% !important; } }
@@ -45,38 +51,37 @@ body {
   src: url("../../fonts/helvetica_bold.ttf") format("opentype"); }
 
 .header {
-  align-items: center;
   height: 7.5rem;
-  position: relative;
-  z-index: 5;
+  display: flex;
   background: #fee600;
-  padding: 2rem; }
-  .header__logo--figure {
-    height: 15rem;
-    width: 15rem;
-    transform: translate(-3.5rem, 10px); }
-    .header__logo--figure img {
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  position: relative; }
+  .header__logo {
+    height: 14rem;
+    width: 14rem; }
+    @media only screen and (max-width: 600px) {
+      .header__logo {
+        color: #fff; } }
+    @media only screen and (max-width: 500px) {
+      .header__logo {
+        color: #fff; } }
+    .header__logo img {
       object-fit: cover;
       display: block;
-      height: 14rem;
-      width: 14rem; }
-  .header__menu {
+      height: 100%;
+      width: 100%;
+      transform: translateX(-3.5rem) translateY(0.5rem); }
+  .header__menu--mobile {
     display: flex;
     align-items: center;
-    width: 38rem; }
-  .header__items {
-    font-size: 1.9rem;
-    font-family: Helvetica Bold;
-    width: 34rem; }
-    .header__items--item {
-      padding-left: 3rem;
-      padding-right: 3rem;
-      cursor: pointer; }
-    .header__items--search {
-      height: 2rem;
-      width: 2rem; }
-      .header__items--search img {
-        object-fit: cover;
-        display: block;
-        width: 100%;
-        height: 100%; }
+    flex-direction: column; }
+    .header__menu--mobile span {
+      display: inline-block;
+      background: #000000;
+      margin: 0.5rem 0;
+      border-radius: 20rem;
+      height: 0.5rem;
+      width: 5.5rem;
+      margin: 0.5rem 0; }
