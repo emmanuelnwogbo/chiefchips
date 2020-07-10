@@ -31,10 +31,11 @@ body {
   @media only screen and (max-width: 500px) {
     body {
       background: green;
-      color: #000000; } }
+      color: #fff; } }
   @media only screen and (max-width: 380px) {
     body {
-      background: mediumslateblue; } }
+      background: mediumslateblue;
+      color: #000000; } }
   @media only screen and (max-width: 320px) {
     body {
       background: red; } }

@@ -37,11 +37,12 @@ body {
 
   @media only screen and (max-width: 500px) {
     background: green;
-    color: #000000
+    color: #fff
   }
 
   @media only screen and (max-width: 380px) {
     background: mediumslateblue;
+    color: #000000;
   }
 
   @media only screen and (max-width: 320px) {
