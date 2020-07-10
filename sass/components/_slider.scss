@@ -4,7 +4,93 @@
 }
 
 .slider {
+  position: relative;
   height: 60rem;
-  background-color: green;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
+
+  @include respond(phone) {
+    height: 40rem;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 5rem;
+    line-height: 8rem;
+
+    & h2 {
+      color: #fff;
+      line-height: 7rem;
+      font-size: 11rem;
+      font-family: Lunchbox Regular;
+      line-height: 8rem;
+
+      @include respond(phone) {
+        font-size: 8rem;
+        line-height: 6rem;
+      }
+
+      & span {
+        display: block;
+      }
+    }
+
+    & button {
+      font-size: 1.7rem;
+      color: #fff;
+      background: red;
+      border-radius: 28rem;
+      padding: 1.5rem 4rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: navajowhite;
+      outline: none;
+
+      @include respond(phone) {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+
+  &__slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 3s ease;
+    opacity: 0;
+    z-index: 1;
+  }
+
+  &__slide--1 {
+    background-image: url(../imgs/slider-1.jpg);
+  }
+
+  &__slide--2 {
+    background-image: url(../imgs/slider-2.jpg);
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #000000;
+      opacity: 0.2;
+      transition: all 3s ease;
+    }
+  }
+
+  &__slide--3 {
+    background-image: url(../imgs/slider-3.jpg);
+  }
 }
