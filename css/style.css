@@ -26,10 +26,12 @@ body {
       background: blue; } }
   @media only screen and (max-width: 600px) {
     body {
-      background: green; } }
+      background: green;
+      color: #fff; } }
   @media only screen and (max-width: 500px) {
     body {
-      background: green; } }
+      background: green;
+      color: #000000; } }
   @media only screen and (max-width: 380px) {
     body {
       background: mediumslateblue; } }
