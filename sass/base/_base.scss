@@ -15,7 +15,7 @@ html {
   }
 
   @include respond(tab-port) {
-    // width < 900?
+    // width < 900? 
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
@@ -26,11 +26,15 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 3.5rem;
+  padding: 3.5rem 18rem;
   min-height: 100vh;
   overflow-x: hidden;
   background: #ffcf3b;
   font-family: Arial, Helvetica, sans-serif;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
 
   @media only screen and (max-width: 800px) {
     background: blue;
