@@ -18,6 +18,9 @@ body {
   overflow-x: hidden;
   background: #ffcf3b;
   font-family: Arial, Helvetica, sans-serif; }
+  @media only screen and (max-width: 500px) {
+    body {
+      background: green; } }
   @media only screen and (max-width: 320px) {
     body {
       background: red; } }
