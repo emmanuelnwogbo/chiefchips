@@ -4,7 +4,9 @@ const dropdownItems = Array.from(
 );
 const dropdownCheck = document.getElementById("header-check");
 const headerLabel = document.getElementById("header-label");
-const variantNavigatiors = document.querySelectorAll(".variants__navi");
+const variantNavigatiors = Array.from(
+  document.querySelectorAll(".variants__navi")
+);
 
 let slideTracker = 0;
 slides[slideTracker].style.opacity = 1;
@@ -42,6 +44,8 @@ headerLabel.addEventListener("click", function () {
   }
 });
 
-variantNavigatiors.addEventListener('click', function () {
-  console.log('yooo')
+variantNavigatiors.forEach((item) => {
+  item.addEventListener("click", function () {
+    console.log("hello there");
+  });
 });
