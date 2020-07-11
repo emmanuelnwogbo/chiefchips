@@ -1,0 +1,49 @@
+.footer {
+  display: flex;
+
+  height: 16rem;
+  margin-top: 2rem;
+  align-items: center;
+  align-content: center;
+  color: rgb(255, 255, 255);
+  background: rgb(254, 230, 0);
+
+  @include respond(phone) {
+    justify-content: space-evenly;
+  }
+
+  &__header {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 0 3rem;
+  }
+
+  &__svgs {
+    display: flex;
+  }
+
+  &__svg {
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: rgba(47, 54, 64, 0.9);
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+
+      @include respond(phone) {
+        margin-right: 1rem;
+      }
+    }
+
+    & svg {
+      height: 3rem;
+      width: 3rem;
+      fill: #fff;
+    }
+  }
+}

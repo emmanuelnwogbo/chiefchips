@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
 
   @include respond(phone) {
-    height: 40rem;
+    height: 50rem;
   }
 
   &__content {
@@ -37,6 +37,10 @@
         line-height: 6rem;
       }
 
+      @media only screen and (max-width: 320px) {
+        font-size: 7rem;
+      }
+
       & span {
         display: block;
       }
@@ -52,9 +56,15 @@
       cursor: pointer;
       border: navajowhite;
       outline: none;
+      text-transform: uppercase;
 
       @include respond(phone) {
         padding: 1.5rem 2rem;
+        font-size: 1.3rem;
+      }
+
+      @media only screen and (max-width: 320px) {
+        font-size: 1.2rem;
       }
     }
   }

@@ -1,6 +1,9 @@
 @import "base/mixins";
+@import "base/animations";
 @import "base/base";
-
 
 @import "components/header";
 @import "components/slider";
+@import "components/variants";
+@import "components/socialfeed";
+@import "components/footer";

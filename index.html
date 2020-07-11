@@ -12,6 +12,10 @@
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
 
+    <link rel="stylesheet" href="fonts/helvetica.ttf" />
+    <link rel="stylesheet" href="fonts/helvetica_bold.ttf" />
+    <link rel="stylesheet" href="fonts/lunchbox.otf" />
+
     <title>Chief chips</title>
   </head>
   <body>
@@ -20,10 +24,55 @@
         <img src="imgs/chef-logo.png" alt="" />
       </figure>
 
-      <div class="header__menu--mobile">
-        <span></span>
-        <span></span>
-        <span></span>
+      <input
+        class="header__check"
+        type="checkbox"
+        name="header__check"
+        id="header-check"
+      />
+
+      <label for="header-check" id="header-label" class="header__label">
+        <div class="header__menu--mobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+
+      <div class="header__menu">
+        <span class="header__menu--item">About</span>
+        <span class="header__menu--item">Contact</span>
+        <span class="header__menu--item">Product</span>
+        <span class="header__menu--item">
+          <figure>
+            <img src="imgs/search-logo.png" alt="" />
+          </figure>
+        </span>
+      </div>
+
+      <div class="header__dropdown">
+        <span class="header__dropdown--item">About Us</span>
+        <span class="header__dropdown--item">Contact</span>
+        <span class="header__dropdown--item">Product</span>
+
+        <div
+          class="header__dropdown--item header__dropdown--socials"
+          class="header__dropdown--socials"
+        >
+          <p>Follow and connect with Chief chips</p>
+          <div class="header__dropdown--svgs">
+            <span>
+              <svg>
+                <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+              </svg>
+            </span>
+            <span>
+              <svg>
+                <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -47,6 +96,144 @@
         <img src="" alt="" />
       </figure>
     </div>
+
+    <div class="variants">
+      <h2 class="variants__h2">
+        Variants
+      </h2>
+
+      <div class="variants__navi variants__navi--left">
+        <span>
+          <svg>
+            <use xlink:href="imgs/sprite.svg#icon-navigate_before"></use>
+          </svg>
+        </span>
+      </div>
+      <div class="variants__navi variants__navi--right">
+        <span>
+          <svg>
+            <use xlink:href="imgs/sprite.svg#icon-navigate_next"></use>
+          </svg>
+        </span>
+      </div>
+
+      <div class="variants__slide">
+        <div class="variants__items">
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-1.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Cassava chips</p>
+              </span>
+              <span class="variants__item--bottom-btn">
+                <button>
+                  See more
+                </button>
+              </span>
+            </div>
+          </div>
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-placeholder.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Coming soon</p>
+              </span>
+            </div>
+          </div>
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-placeholder.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Coming soon</p>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="variants__items">
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-placeholder.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Coming soon</p>
+              </span>
+            </div>
+          </div>
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-placeholder.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Coming soon</p>
+              </span>
+            </div>
+          </div>
+          <div class="variants__item">
+            <figure class="variants__item--top">
+              <img src="imgs/variant-placeholder.jpg" alt="" />
+            </figure>
+            <div class="variants__item--bottom">
+              <span class="variants__item--bottom-label">
+                <p>Coming soon</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="socialfeed">
+      <h2 class="socialfeed__h2">
+        Social feed
+      </h2>
+
+      <div class="socialfeed__boxes">
+        <div class="socialfeed__box socialfeed__box--instagram">
+          <span>
+            <svg>
+              <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="socialfeed__box socialfeed__box--twitter">
+          <span>
+            <svg>
+              <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span class="footer__header"><p>Follow us</p></span>
+      <span class="footer__svgs">
+        <span class="footer__svg">
+          <svg>
+            <use xlink:href="imgs/sprite.svg#icon-facebook"></use>
+          </svg>
+        </span>
+        <span class="footer__svg">
+          <svg>
+            <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+          </svg>
+        </span>
+        <span class="footer__svg">
+          <svg>
+            <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+          </svg>
+        </span>
+      </span>
+    </footer>
   </body>
 
   <script src="js/index.js"></script>

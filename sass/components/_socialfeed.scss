@@ -1,0 +1,97 @@
+.socialfeed {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+  height: 76rem;
+  margin-top: 2rem;
+  background: url("../imgs/social-media-box.jpg");
+  padding: 5rem 7rem;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    padding: 5rem 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 5rem 1rem;
+    height: 53rem;
+  }
+
+  &__h2 {
+    position: relative;
+    font-size: 9rem;
+    color: rgba(30, 39, 46, 0.6);
+    z-index: 2;
+    margin-bottom: 4rem;
+
+    @include respond(phone) {
+      font-size: 6rem;
+    }
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    position: relative;
+    height: 50rem;
+    width: 50rem;
+
+    @include respond(tab-land) {
+      height: 45rem;
+      width: 45rem;
+    }
+
+    @include respond(tab-port) {
+      height: 40rem;
+      width: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 20rem;
+      width: 19rem;
+    }
+
+    @media only screen and (max-width: 414px) {
+      height: 23rem;
+      width: 22rem;
+    }
+
+    @media only screen and (max-width: 375px) {
+      height: 20rem;
+      width: 19rem;
+    }
+
+    @media only screen and (max-width: 320px) {
+      height: 19rem;
+      width: 16.5rem;
+    }
+
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(30, 39, 46, 0.9);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      & svg {
+        fill: #fff;
+        height: 10rem;
+        width: 10rem;
+        opacity: 0.3;
+
+        @include respond(phone) {
+          height: 7rem;
+          width: 7rem;
+        }
+      }
+    }
+  }
+}
