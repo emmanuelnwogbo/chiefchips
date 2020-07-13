@@ -37,12 +37,11 @@
 
   &__box {
     position: relative;
-    flex-basis: 47%;
-    height: 50rem;
+    flex-basis: 45%;
+    height: 43rem;
 
     @include respond(tab-land) {
       height: 45rem;
-      //width: 45rem;
     }
 
     @include respond(tab-port) {
@@ -52,23 +51,8 @@
 
     @include respond(phone) {
       height: 20rem;
-      //width: 19rem;
+      flex-basis: 49%;
     }
-
-    /*@media only screen and (max-width: 414px) {
-      height: 23rem;
-      width: 22rem;
-    }
-
-    @media only screen and (max-width: 375px) {
-      height: 20rem;
-      width: 19rem;
-    }
-
-    @media only screen and (max-width: 320px) {
-      height: 19rem;
-      width: 16.5rem;
-    }*/
 
     & span {
       position: absolute;

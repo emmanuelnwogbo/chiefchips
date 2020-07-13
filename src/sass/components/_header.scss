@@ -1,6 +1,6 @@
 @font-face {
   font-family: Helvetica Bold;
-  src: url("../../fonts/helvetica_bold.ttf") format("opentype");
+  src: url("../fonts/helvetica_bold.ttf") format("opentype");
 }
 
 .header {
@@ -42,7 +42,27 @@
       cursor: pointer;
 
       &:not(:last-child) {
-        padding: 0 2.6rem;
+        position: relative;
+        padding: 1rem 2.6rem;
+        height: 7rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: "";
+          height: 51%;
+          width: 1.5px;
+          background: #000000;
+          position: absolute;
+          right: 0;
+        }
+
+        &:nth-last-child(2) {
+          &::before {
+            opacity: 0;
+          }
+        }
       }
 
       & figure {

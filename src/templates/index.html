@@ -5,23 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-
-    <link rel="stylesheet" href="fonts/helvetica.ttf" />
-    <link rel="stylesheet" href="fonts/helvetica_bold.ttf" />
-    <link rel="stylesheet" href="fonts/lunchbox.otf" />
+    <link rel="stylesheet" href="../fonts/helvetica.ttf" />
+    <link rel="stylesheet" href="../fonts/helvetica_bold.ttf" />
+    <link rel="stylesheet" href="../fonts/lunchbox.otf" />
 
     <title>Chief chips</title>
   </head>
   <body>
     <header class="header">
       <figure class="header__logo">
-        <img src="imgs/chef-logo.png" alt="" />
+        <img src="../imgs/chef-logo.png" alt="" />
       </figure>
 
       <input
@@ -45,7 +38,7 @@
         <span class="header__menu--item">Product</span>
         <span class="header__menu--item">
           <figure>
-            <img src="imgs/search-logo.png" alt="" />
+            <img src="../imgs/search-logo.png" alt="" />
           </figure>
         </span>
       </div>
@@ -63,12 +56,12 @@
           <div class="header__dropdown--svgs">
             <span>
               <svg>
-                <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+                <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
               </svg>
             </span>
             <span>
               <svg>
-                <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+                <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
               </svg>
             </span>
           </div>
@@ -105,86 +98,76 @@
       <div class="variants__navi variants__navi--left">
         <span>
           <svg>
-            <use xlink:href="imgs/sprite.svg#icon-navigate_before"></use>
+            <use xlink:href="../imgs/sprite.svg#icon-navigate_before"></use>
           </svg>
         </span>
       </div>
       <div class="variants__navi variants__navi--right">
         <span>
           <svg>
-            <use xlink:href="imgs/sprite.svg#icon-navigate_next"></use>
+            <use xlink:href="../imgs/sprite.svg#icon-navigate_next"></use>
           </svg>
         </span>
       </div>
 
-      <div class="variants__slide">
-        <div class="variants__items">
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-1.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Cassava chips</p>
-              </span>
-              <span class="variants__item--bottom-btn">
-                <button>
-                  See more
-                </button>
-              </span>
+      <div class="variants__sliderwrap">
+        <div class="variants__slide" id="variants-slide">
+          <div class="variants__slide--item">
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-1"
+            >
+              <figure></figure>
             </div>
-          </div>
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-placeholder.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Coming soon</p>
-              </span>
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-2"
+            >
+              <figure></figure>
             </div>
-          </div>
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-placeholder.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Coming soon</p>
-              </span>
-            </div>
-          </div>
-        </div>
 
-        <div class="variants__items">
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-placeholder.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Coming soon</p>
-              </span>
+            <div class="variants__slide--card variants__slide--card-1">
+              <figure></figure>
+            </div>
+            <div class="variants__slide--card">
+              <figure></figure>
+            </div>
+            <div class="variants__slide--card">
+              <figure></figure>
             </div>
           </div>
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-placeholder.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Coming soon</p>
-              </span>
+
+          <div class="variants__slide--item">
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-3"
+            >
+              <figure></figure>
+            </div>
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-4"
+            >
+              <figure></figure>
+            </div>
+
+            <div class="variants__slide--card">
+              <figure></figure>
+            </div>
+            <div class="variants__slide--card">
+              <figure></figure>
+            </div>
+            <div class="variants__slide--card">
+              <figure></figure>
             </div>
           </div>
-          <div class="variants__item">
-            <figure class="variants__item--top">
-              <img src="imgs/variant-placeholder.jpg" alt="" />
-            </figure>
-            <div class="variants__item--bottom">
-              <span class="variants__item--bottom-label">
-                <p>Coming soon</p>
-              </span>
+
+          <div class="variants__slide--item">
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-5"
+            >
+              <figure></figure>
+            </div>
+            <div
+              class="variants__slide--card-mobile variants__slide--card-mobile-6"
+            >
+              <figure></figure>
             </div>
           </div>
         </div>
@@ -200,14 +183,14 @@
         <div class="socialfeed__box socialfeed__box--instagram">
           <span>
             <svg>
-              <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+              <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
             </svg>
           </span>
         </div>
         <div class="socialfeed__box socialfeed__box--twitter">
           <span>
             <svg>
-              <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+              <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
             </svg>
           </span>
         </div>
@@ -219,24 +202,22 @@
       <span class="footer__svgs">
         <span class="footer__svg">
           <svg>
-            <use xlink:href="imgs/sprite.svg#icon-facebook"></use>
+            <use xlink:href="../imgs/sprite.svg#icon-facebook"></use>
           </svg>
         </span>
         <span class="footer__svg">
           <svg>
-            <use xlink:href="imgs/sprite.svg#icon-instagram"></use>
+            <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
           </svg>
         </span>
         <span class="footer__svg">
           <svg>
-            <use xlink:href="imgs/sprite.svg#icon-twitter"></use>
+            <use xlink:href="../img/sprite.svg#icon-twitter"></use>
           </svg>
         </span>
       </span>
     </footer>
   </body>
 
-  <script src="js/index.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="../js/index.js"></script>
 </html>

@@ -1,3 +1,7 @@
+import "../sass/main.scss";
+
+import swipe from "pure-swipe-js";
+
 const slides = Array.from(document.querySelectorAll(".slider__slide"));
 const dropdownItems = Array.from(
   document.querySelectorAll(".header__dropdown--item")
@@ -7,6 +11,27 @@ const headerLabel = document.getElementById("header-label");
 const variantNavigatiors = Array.from(
   document.querySelectorAll(".variants__navi")
 );
+const variantSlides = Array.from(
+  document.querySelectorAll(".variants__slide--item")
+);
+const variantSlide = document.getElementById("variants-slide");
+
+console.log(variantSlide);
+variantSlide.addEventListener("swipe.progress", function (e) {
+  console.log("swiped begin", e.detail.direction, e);
+  const direction = e.detail.direction;
+  console.log(e.detail.x, e.detail.y, 'dir');
+
+  if (direction === null) {
+    return;
+  }
+
+  if (direction % 2 === 0) {
+    console.log("right");
+  } else {
+    console.log("left");
+  }
+});
 
 let slideTracker = 0;
 slides[slideTracker].style.opacity = 1;
@@ -46,6 +71,16 @@ headerLabel.addEventListener("click", function () {
 
 variantNavigatiors.forEach((item) => {
   item.addEventListener("click", function () {
-    console.log("hello there");
+    if (item.classList.contains("variants__navi--right")) {
+      variantSlides[0].style.transform = "translateX(-100%)";
+      variantSlides[1].style.transform = "translateX(-100%)";
+      variantSlides[0].style.opacity = "0";
+      variantSlides[1].style.opacity = "1";
+    } else {
+      variantSlides[0].style.transform = "translateX(0)";
+      variantSlides[1].style.transform = "translateX(0)";
+      variantSlides[0].style.opacity = "1";
+      variantSlides[1].style.opacity = "0";
+    }
   });
 });
