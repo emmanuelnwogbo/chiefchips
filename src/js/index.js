@@ -33,14 +33,12 @@ variantSlides[0].addEventListener("swipe.progress", function (e) {
     console.log("right");
     variantSlides[0].style.transform = "translateX(0)";
     variantSlides[1].style.transform = "translateX(0)";
-    variantSlides[0].style.opacity = "1";
-    variantSlides[1].style.opacity = "0";
+    variantSlides[2].style.transform = "translateX(0)";
   } else {
     console.log("left");
-    variantSlides[0].style.transform = "translateX(-100%)";
+    variantSlides[0].style.transform = "translateX(-103%)";
     variantSlides[1].style.transform = "translateX(-100%)";
-    variantSlides[0].style.opacity = "0";
-    variantSlides[1].style.opacity = "1";
+    variantSlides[2].style.transform = "translateX(-97%)";
     return;
   }
 });
@@ -57,17 +55,12 @@ variantSlides[1].addEventListener("swipe.progress", function (e) {
   if (direction % 2 === 0) {
     console.log("right");
     variantSlides[0].style.transform = "translateX(0)";
-    variantSlides[1].style.transform = "translateX(0)";
-    variantSlides[0].style.opacity = "1";
-    variantSlides[1].style.opacity = "0";
+    variantSlides[1].style.transform = "translateX(3%)";
   } else {
     console.log("left");
     variantSlides[0].style.transform = "translateX(-200%)";
-    variantSlides[1].style.transform = "translateX(-200%)";
+    variantSlides[1].style.transform = "translateX(-203%)";
     variantSlides[2].style.transform = "translateX(-200%)";
-    variantSlides[0].style.opacity = "0";
-    variantSlides[1].style.opacity = "0";
-    variantSlides[2].style.opacity = "1";
     return;
   }
 });
@@ -82,13 +75,10 @@ variantSlides[2].addEventListener("swipe.progress", function (e) {
   }
 
   if (direction % 2 === 0) {
-    console.log("right");
-    variantSlides[0].style.transform = "translateX(-100%)";
+    console.log("right here");
+    variantSlides[0].style.transform = "translateX(-103%)";
     variantSlides[1].style.transform = "translateX(-100%)";
-    variantSlides[2].style.transform = "translateX(0)";
-    variantSlides[0].style.opacity = "0";
-    variantSlides[1].style.opacity = "1";
-    variantSlides[2].style.opacity = "0";
+    variantSlides[2].style.transform = "translateX(-97%)";
   } else {
     return;
   }
@@ -133,15 +123,11 @@ headerLabel.addEventListener("click", function () {
 variantNavigatiors.forEach((item) => {
   item.addEventListener("click", function () {
     if (item.classList.contains("variants__navi--right")) {
-      variantSlides[0].style.transform = "translateX(-100%)";
+      variantSlides[0].style.transform = "translateX(-110%)";
       variantSlides[1].style.transform = "translateX(-100%)";
-      variantSlides[0].style.opacity = "0";
-      variantSlides[1].style.opacity = "1";
     } else {
       variantSlides[0].style.transform = "translateX(0)";
-      variantSlides[1].style.transform = "translateX(0)";
-      variantSlides[0].style.opacity = "1";
-      variantSlides[1].style.opacity = "0";
+      variantSlides[1].style.transform = "translateX(10%)";
     }
   });
 });
