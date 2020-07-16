@@ -1,0 +1,176 @@
+.flavour {
+  padding: 3.5rem 8rem;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+
+  @include respond(phone) {
+    padding: 4rem 2rem;
+  }
+
+  &__directions {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+
+    @include respond(tab-land) {
+     display: none;
+     z-index: -1;
+    }
+
+    & span {
+      cursor: pointer;
+      & svg {
+        height: 6rem;
+        width: 6rem;
+      }
+    }
+
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  &__h2 {
+    position: relative;
+    font-size: 7.5rem;
+    color: rgba(30, 39, 46, 0.6);
+    z-index: 2;
+    margin-bottom: 1.5rem;
+    transform: translateX(-5px);
+
+    @include respond(phone) {
+      font-size: 4rem;
+      transform: translateX(0);
+    }
+  }
+
+  &__slide {
+    //overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    transition: all 0.5s ease;
+    z-index: 9;
+  }
+
+  &__container {
+    background: #fff;
+    height: 67vh;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      height: 73vh;
+    }
+
+    @include respond(phone) {
+      height: 75vh;
+    }
+
+    & figure {
+      background-image: url(../imgs/variant-placeholder.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top;
+      position: relative;
+    }
+
+    &:nth-child(1) {
+      & figure {
+        background-image: url(../imgs/variant-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        position: relative;
+      }
+    }
+
+    & figure {
+      width: 45%;
+      height: 100%;
+
+      @include respond(tab-land) {
+        width: 100%;
+        height: 40%;
+      }
+    }
+
+    &--details {
+      width: 55%;
+      background: #fff;
+      height: 100%;
+      padding: 3rem 4rem;
+
+      @include respond(phone) {
+        padding: 3rem 2rem;
+      }
+
+      & h2 {
+        position: relative;
+        font-size: 5rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding: 0 0 2.5rem 0;
+
+        @include respond(phone) {
+          font-size: 3rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: red;
+        }
+      }
+
+      @include respond(tab-land) {
+        width: 100%;
+        height: 60%;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-1.5rem);
+
+    @include respond(phone) {
+      transform: translateY(-2.5rem);
+    }
+
+    & span {
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin: 0 0.5rem;
+      background: #fff;
+      border-radius: 100%;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

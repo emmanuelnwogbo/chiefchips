@@ -6,6 +6,7 @@
   height: 76rem;
   margin-top: 2rem;
   background: url("../imgs/social-media-box.jpg");
+  @include backgroundImageStyle;
   padding: 5rem 7rem;
   overflow: hidden;
 

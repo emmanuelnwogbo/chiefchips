@@ -15,7 +15,7 @@ html {
   }
 
   @include respond(tab-port) {
-    // width < 900? 
+    // width < 900?
     font-size: 50%; //1 rem = 8px, 8/16 = 50%
   }
 
@@ -35,31 +35,14 @@ body {
   @include respond(tab-land) {
     padding: 2rem;
   }
+}
 
-  /*@media only screen and (max-width: 800px) {
-    background: blue;
+.product-container {
+  height: calc(100vh - 10vh);
+  background-image: url("../imgs/product-hanger.jpg");
+  margin: 0 auto;
+
+  @include respond(phone) {
+    height: calc(100vh - 5vh);
   }
-
-  @media only screen and (max-width: 700px) {
-    background: linen;
-  }
-
-  @media only screen and (max-width: 600px) {
-    background: burlywood;
-    color: #fff;
-  }
-
-  @media only screen and (max-width: 500px) {
-    background: lightgreen;
-    color: #fff;
-  }
-
-  @media only screen and (max-width: 380px) {
-    background: mediumslateblue;
-    color: #000000;
-  }
-
-  @media only screen and (max-width: 320px) {
-    background: red;
-  }*/
 }

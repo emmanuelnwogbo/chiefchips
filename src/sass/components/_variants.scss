@@ -6,6 +6,7 @@
   height: 76rem;
   margin-top: 2rem;
   background-image: url("../imgs/product-hanger.jpg");
+  @include backgroundImageStyle;
   padding: 5rem 7rem;
   overflow: hidden;
 
@@ -171,11 +172,13 @@
           & figure {
             height: 20.5rem;
             background: url(../imgs/variant-placeholder.jpg);
+            @include backgroundImageStyle;
           }
 
           &-1 {
             & figure {
               background: url(../imgs/variant-1.jpg);
+              @include backgroundImageStyle;
             }
           }
         }
@@ -187,6 +190,7 @@
 
       & figure {
         background: url(../imgs/variant-placeholder.jpg);
+        @include backgroundImageStyle;
         height: 33rem;
       }
 
@@ -230,6 +234,7 @@
       &-1 {
         & figure {
           background: url(../imgs/variant-1.jpg);
+          @include backgroundImageStyle;
         }
       }
     }
