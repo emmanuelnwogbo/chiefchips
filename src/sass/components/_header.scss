@@ -16,7 +16,10 @@
     height: 15rem;
     width: 15rem;
     transform: translate(-3.8rem, 1rem);
-    z-index: 5;
+
+    &-link {
+      z-index: 14;
+    }
 
     & img {
       object-fit: cover;
@@ -83,7 +86,7 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      z-index: 5;
+      z-index: 12;
 
       & span {
         height: 0.6rem;
@@ -151,12 +154,16 @@
     left: 0;
     height: 100vh;
     background: #fee600;
-    z-index: 4;
+    z-index: 11;
     padding: 13rem 0 0 4rem;
-    display: flex;
     flex-direction: column;
     transition: all 0.5s ease;
     transform: translateX(-100%);
+    display: none;
+
+    @include respond(tab-land) {
+      display: flex;
+    }
 
     &--item {
       opacity: 0;

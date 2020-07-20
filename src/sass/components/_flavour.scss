@@ -19,8 +19,8 @@
     z-index: 10;
 
     @include respond(tab-land) {
-     display: none;
-     z-index: -1;
+      display: none;
+      z-index: -1;
     }
 
     & span {
@@ -71,6 +71,7 @@
     display: flex;
     align-items: center;
     transition: all 0.5s ease;
+    overflow: hidden;
 
     &:nth-child(2) {
       opacity: 0;
@@ -119,16 +120,110 @@
       height: 100%;
       padding: 3rem 4rem;
 
+      &-description {
+        font-size: 1.5rem;
+        line-height: 1.5;
+      }
+
+      &-ingredients {
+        &-check {
+          position: absolute;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          z-index: -1;
+
+          &:checked {
+            & ~ div.ingredient-h2 > h2 > label {
+              transform: rotate(45deg);
+            }
+
+            & ~ div.ingredient-body {
+              height: 28rem;
+              opacity: 1;
+            }
+          }
+        }
+
+        &-header {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          z-index: 2;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0.5rem;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #000000;
+          }
+
+          & h2 {
+            display: block;
+            margin-top: 2rem;
+            position: relative;
+            color: #151515;
+            font-size: 2.3rem;
+            padding: 0 0 1.1rem;
+            text-align: left;
+            text-decoration: none;
+          }
+
+          & label {
+            cursor: pointer;
+            transition: all 0.1s ease;
+            display: inline-block;
+
+            & svg {
+              height: 2rem;
+              width: 2rem;
+              fill: #000000;
+            }
+          }
+        }
+
+        & figure {
+          background-image: url(../imgs/nutrition_fact.jpg) !important;
+          width: 44rem;
+          height: 52rem;
+          z-index: 1;
+          transform: translateY(-13rem) translateX(-3rem);
+
+          @include respond(phone) {
+            transform: translateY(-12rem) translateX(-3rem);
+            width: 39rem;
+          }
+        }
+
+        &-body {
+          height: 28rem;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          width: 60rem;
+
+          transition: all 0.1s ease;
+          height: 0px;
+          z-index: -1;
+        }
+      }
+
       @include respond(phone) {
         padding: 3rem 2rem;
       }
 
-      & h2 {
+      & h2.flavour__header {
         position: relative;
         font-size: 5rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 0 0 2.5rem 0;
+        background: #fff;
+        z-index: 3;
 
         @include respond(phone) {
           font-size: 3rem;
@@ -137,7 +232,7 @@
         &::before {
           content: "";
           position: absolute;
-          bottom: 0;
+          bottom: 1.3rem;
           left: 0;
           width: 100%;
           height: 2px;

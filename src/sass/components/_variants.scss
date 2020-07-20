@@ -17,6 +17,7 @@
   @include respond(phone) {
     padding: 5rem 1rem;
     height: 53rem;
+    background-image: url("../imgs/variant-424x288.jpg");
   }
 
   &__mobilecheck {
@@ -81,6 +82,7 @@
   }
 
   &__sliderwrap {
+
   }
 
   &__slide {
@@ -93,7 +95,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: red;
       flex-basis: 100%;
       flex-shrink: 0;
       transition: all 0.6s ease;
@@ -107,6 +108,16 @@
       }
 
       &:nth-child(3) {
+        //display: none;
+        transform: translateX(-90%);
+
+        @include respond(phone) {
+          display: none;
+          transform: translateX(3%);
+        }
+      }
+
+      &:nth-child(4) {
         display: none;
 
         @include respond(phone) {
@@ -118,7 +129,8 @@
 
     &--card {
       height: 51rem;
-      flex-basis: 32%;
+      // flex-basis: 32%;
+      flex-basis: 45%;
       background: #ffcf3b;
 
       &-mobile {

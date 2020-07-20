@@ -9,7 +9,7 @@
   margin-bottom: 2rem;
 
   @include respond(phone) {
-    height: 50rem;
+    height: 40rem;
   }
 
   &__content {
@@ -80,14 +80,23 @@
     z-index: 1;
 
     @include backgroundImageStyle;
+    //background-size: contain
   }
 
   &__slide--1 {
     background-image: url(../imgs/slider-1.jpg);
+
+    @include respond(phone) {
+      background-image: url(../imgs/400x288.jpg);
+    }
   }
 
   &__slide--2 {
     background-image: url(../imgs/slider-2.jpg);
+
+    @include respond(phone) {
+      background-image: url(../imgs/400x288-slider2.jpg);
+    }
 
     &::after {
       content: "";
@@ -104,5 +113,9 @@
 
   &__slide--3 {
     background-image: url(../imgs/slider-3.jpg);
+
+    @include respond(phone) {
+      background-image: url(../imgs/400x288-slider3.jpg);
+    }
   }
 }
