@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>about</title>
+  </head>
+  <style>
+    .container {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    function revealBody() {
+      const container = document.querySelector(".container");
+      container.style.opacity = `1`;
+    }
+  </script>
+  <body onload="revealBody()">
+    <div class="container">
+        <header class="header">
+            <a class="header__logo-link" href="index.html">
+              <figure class="header__logo">
+                <img src="8ed5ad3bc45a4529f39eb08d2399ad21.png" alt="" />
+              </figure>
+            </a>
+      
+            <input
+              class="header__check"
+              type="checkbox"
+              name="header__check"
+              id="header-check"
+            />
+      
+            <label for="header-check" id="header-label" class="header__label">
+              <div class="header__menu--mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </label>
+      
+            <div class="header__menu">
+              <span class="header__menu--item"><a href="about.html">About Us</a></span>
+              <!--<span class="header__menu--item">Contact</span>-->
+              <span class="header__menu--item"><a href="variants.html">Products</a></span>
+              <span class="header__menu--item">
+                <figure>
+                  <img src="ac23a6079c2d8a866bbf39b1a439e93e.png" alt="" />
+                </figure>
+              </span>
+            </div>
+      
+            <div class="header__dropdown">
+              <span class="header__dropdown--item"><a href="about.html">About Us</a></span>
+              <!--<span class="header__dropdown--item">Contact</span>-->
+              <span class="header__dropdown--item"><a href="variants.html">Products</a></span>
+      
+              <div
+                class="header__dropdown--item header__dropdown--socials"
+                class="header__dropdown--socials"
+              >
+                <p>Follow and connect with Chief chips</p>
+                <div class="header__dropdown--svgs">
+                  <span>
+                    <svg>
+                      <use xlink:href="efc472be6be4be292af381b22a79897d.svg#icon-twitter"></use>
+                    </svg>
+                  </span>
+                  <span>
+                    <svg>
+                      <use xlink:href="efc472be6be4be292af381b22a79897d.svg#icon-instagram"></use>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="about">
+              <h2  class="about__h2">About Us</h1>
+      
+              <div class="about__container">
+                  <figure>
+      
+                  </figure>
+      
+                  <div class="about__container--content">
+                      <p>Wherever celebrations and good times happen, the LAY'S® brand will be there just as it has been for more than 75 years. With flavors almost as rich as our history, we have a chip or crisp flavor guaranteed to bring a smile on your face.</p>
+                  </div>
+              </div>
+          </div>
+    </div>
+  <script type="text/javascript" src="js/bundle.js"></script></body>
+</html>
