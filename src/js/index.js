@@ -42,8 +42,6 @@ class Map {
 document.addEventListener("DOMContentLoaded", function () {
   let mapElement = document.getElementById("map");
 
-  //document.querySelectorAll('.')
-
   Map.loadGoogleMapsApi().then(function (googleMaps) {
     Map.createMap(googleMaps, mapElement);
   });
@@ -81,11 +79,10 @@ variantSlides[0] !== undefined
 
       if (direction % 2 === 0) {
         console.log("right");
-        variantSlides[0].style.transform = "translateX(0)";
-        variantSlides[1].style.transform = "translateX(0)";
-        variantSlides[3].style.transform = "translateX(0)";
+        return;
       } else {
         console.log("left");
+        console.log(variantSlides, "this is interesting");
         variantSlides[0].style.transform = "translateX(-103%)";
         variantSlides[1].style.transform = "translateX(-100%)";
         variantSlides[3].style.transform = "translateX(-97%)";
@@ -185,22 +182,65 @@ headerLabel !== undefined && headerLabel !== null
 
 let variantNavTracker = 0;
 let reset = false;
+let presentValue = 0;
 
 variantNavigatiors.forEach((item) => {
   item.addEventListener("click", function () {
     if (item.classList.contains("variants__navi--right")) {
-
       variantNavTracker += 1;
-      Array.from(document.querySelectorAll(".variants__slide--item"))[
+      presentValue = parseInt(`-${variantNavTracker}00`);
+
+      const variantItemsDesktop = Array.from(
+        document.querySelectorAll(".variants__slide--item-desktop")
+      );
+
+      variantItemsDesktop[
+        variantNavTracker - 1
+      ].style.transform = `translateX(-${variantNavTracker}10%)`;
+      variantItemsDesktop[
         variantNavTracker
       ].style.transform = `translateX(-${variantNavTracker}00%)`;
-      Array.from(document.querySelectorAll(".variants__slide--item"))[
+
+      console.log(presentValue, "this is the present value");
+
+      const duplicate_elem = variantItemsDesktop[
         variantNavTracker - 1
-      ].style.transform = `translateX(-${variantNavTracker}20%)`;
+      ].cloneNode(true);
+
+      duplicate_elem.style.transform = `translateX(-${variantNavTracker}90%)`;
+
+      variantItemsDesktop[
+        variantNavTracker - 1
+      ].parentElement.insertAdjacentElement("beforeend", duplicate_elem);
     }
 
     if (item.classList.contains("variants__navi--left")) {
       console.log("left");
+
+      const variantItemsDesktop = Array.from(
+        document.querySelectorAll(".variants__slide--item-desktop")
+      );
+
+      if (variantNavTracker === 0) {
+        variantItemsDesktop[
+          variantNavTracker
+        ].style.transform = `translateX(${variantNavTracker}00%)`;
+        return;
+      }
+
+      variantNavTracker -= 1;
+      presentValue = parseInt(`-${variantNavTracker}00`);
+      const leftValue = presentValue - -120;
+
+      variantItemsDesktop[
+        variantNavTracker
+      ].style.transform = `translateX(-${variantNavTracker}00%)`;
+
+      console.log(presentValue);
+
+      variantItemsDesktop[
+        variantNavTracker + 1
+      ].style.transform = `translateX(${leftValue}%)`;
     }
   });
 });

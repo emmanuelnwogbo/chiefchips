@@ -37,12 +37,11 @@ body {
   }
 }
 
-.product-container {
-  height: calc(100vh - 10vh);
-  background-image: url("../imgs/product-hanger.jpg");
-  margin: 0 auto;
+a {
+  text-decoration: none;
+  color: #000000;
+}
 
-  @include respond(phone) {
-    height: calc(100vh - 5vh);
-  }
+.container {
+  opacity: 0;
 }

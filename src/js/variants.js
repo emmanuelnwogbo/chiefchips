@@ -124,3 +124,14 @@ flavours.forEach((item) => {
     }
   });
 });
+
+const nutLabel = document.getElementById("nutrition-label");
+
+nutLabel !== null ? nutLabel.addEventListener("click", function (e) {
+  const flavourContainer = document.querySelector(".flavour__container");
+  const checkbox = document.getElementById("nutrition-check");
+
+  checkbox.checked
+    ? (flavourContainer.style.backgroundRepeat = `no-repeat`)
+    : (flavourContainer.style.backgroundRepeat = `repeat`);
+}) : '';

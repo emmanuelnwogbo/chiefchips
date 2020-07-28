@@ -11,334 +11,355 @@
 
     <title>Chief chips</title>
   </head>
-  <body>
-    <header class="header">
-      <a class="header__logo-link" href="/">
-        <figure class="header__logo">
-          <img src="../imgs/chef-logo.png" alt="" />
-        </figure>
-      </a>
-
-      <input
-        class="header__check"
-        type="checkbox"
-        name="header__check"
-        id="header-check"
-      />
-
-      <label for="header-check" id="header-label" class="header__label">
-        <div class="header__menu--mobile">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </label>
-
-      <div class="header__menu">
-        <span class="header__menu--item">About</span>
-        <!--<span class="header__menu--item">Contact</span>-->
-        <span class="header__menu--item">Product</span>
-        <span class="header__menu--item">
-          <figure>
-            <img src="../imgs/search-logo.png" alt="" />
+  <style>
+    .container {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    function revealBody() {
+      const container = document.querySelector(".container");
+      container.style.opacity = `1`;
+    }
+  </script>
+  <body onload="revealBody()">
+    <div class="container">
+      <header class="header">
+        <a class="header__logo-link" href="index.html">
+          <figure class="header__logo">
+            <img src="../imgs/chef-logo.png" alt="" />
           </figure>
-        </span>
+        </a>
+
+        <input
+          class="header__check"
+          type="checkbox"
+          name="header__check"
+          id="header-check"
+        />
+
+        <label for="header-check" id="header-label" class="header__label">
+          <div class="header__menu--mobile">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+
+        <div class="header__menu">
+          <span class="header__menu--item"
+            ><a href="about.html">About Us</a></span
+          >
+          <!--<span class="header__menu--item">Contact</span>-->
+          <span class="header__menu--item"
+            ><a href="variants.html">Products</a></span
+          >
+          <span class="header__menu--item">
+            <figure>
+              <img src="../imgs/search-logo.png" alt="" />
+            </figure>
+          </span>
+        </div>
+
+        <div class="header__dropdown">
+          <span class="header__dropdown--item"
+            ><a href="about.html">About Us</a></span
+          >
+          <!--<span class="header__dropdown--item">Contact</span>-->
+          <span class="header__dropdown--item"
+            ><a href="variants.html">Products</a></span
+          >
+
+          <div
+            class="header__dropdown--item header__dropdown--socials"
+            class="header__dropdown--socials"
+          >
+            <p>Follow and connect with Chief chips</p>
+            <div class="header__dropdown--svgs">
+              <span>
+                <svg>
+                  <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
+                </svg>
+              </span>
+              <span>
+                <svg>
+                  <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="slider">
+        <div class="slider__content">
+          <h2>
+            <span>The chief</span>
+            <span>is here</span>
+          </h2>
+          <span>
+            <button><a href="variants.html">Find your flavour</a></button>
+          </span>
+        </div>
+        <figure class="slider__slide slider__slide--1">
+          <img src="" alt="" />
+        </figure>
+        <figure class="slider__slide slider__slide--2">
+          <img src="" alt="" />
+        </figure>
+        <figure class="slider__slide slider__slide--3">
+          <img src="" alt="" />
+        </figure>
       </div>
 
-      <div class="header__dropdown">
-        <span class="header__dropdown--item">About Us</span>
-        <span class="header__dropdown--item">Contact</span>
-        <span class="header__dropdown--item">Product</span>
+      <div class="variants">
+        <h2 class="variants__h2">
+          Variants
+        </h2>
 
-        <div
-          class="header__dropdown--item header__dropdown--socials"
-          class="header__dropdown--socials"
-        >
-          <p>Follow and connect with Chief chips</p>
-          <div class="header__dropdown--svgs">
-            <span>
-              <svg>
-                <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
-              </svg>
-            </span>
+        <div class="variants__navi variants__navi--left">
+          <span>
+            <svg>
+              <use xlink:href="../imgs/sprite.svg#icon-navigate_before"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="variants__navi variants__navi--right">
+          <span>
+            <svg>
+              <use xlink:href="../imgs/sprite.svg#icon-navigate_next"></use>
+            </svg>
+          </span>
+        </div>
+
+        <div class="variants__sliderwrap">
+          <input
+            type="checkbox"
+            class="variants__mobilecheck"
+            id="mobile-variant-check"
+          />
+          <div class="variants__slide" id="variants-slide">
+            <div class="variants__slide--item variants__slide--item-desktop">
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-1"
+              >
+                <figure></figure>
+
+                <div class="variants__slide--card-mobile-about">
+                  <h2>
+                    <span>Cassava Chips</span>
+                    <span>Lightly salted</span>
+                  </h2>
+                  <a href="variants.html"
+                    ><button class="variants-button lightly-salted">
+                      View
+                    </button></a
+                  >
+                </div>
+              </div>
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-2"
+              >
+                <figure></figure>
+
+                <div class="variants__slide--card-mobile-about">
+                  <h2>
+                    <span>Cassava Chips</span>
+                    <span>Spicy pepper</span>
+                  </h2>
+
+                  <button class="variants-button spicy-pepper">View</button>
+                </div>
+              </div>
+
+              <div class="variants__slide--card variants__slide--card-1">
+                <figure></figure>
+                <div class="variants__slide--card-about">
+                  <h2>
+                    <span>Cassava Chips</span>
+                    <span>Lightly salted</span>
+                  </h2>
+
+                  <a href="variants.html"
+                    ><button class="variants-button lightly-salted">
+                      View
+                    </button></a
+                  >
+                </div>
+              </div>
+              <div class="variants__slide--card">
+                <figure></figure>
+
+                <div class="variants__slide--card-about">
+                  <h2>
+                    <span>Cassava Chips</span>
+                    <span>Spicy pepper</span>
+                  </h2>
+
+                  <button class="variants-button spicy-pepper">View</button>
+                </div>
+              </div>
+              <!--<div class="variants__slide--card">
+                <figure></figure>
+              </div>-->
+            </div>
+
+            <div class="variants__slide--item variants__slide--item-desktop">
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-3"
+              >
+                <figure></figure>
+              </div>
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-4"
+              >
+                <figure></figure>
+              </div>
+
+              <div class="variants__slide--card">
+                <figure></figure>
+              </div>
+              <div class="variants__slide--card">
+                <figure></figure>
+              </div>
+              <!--<div class="variants__slide--card">
+                <figure></figure>
+              </div>-->
+            </div>
+
+            <div class="variants__slide--item variants__slide--item-desktop">
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-3"
+              >
+                <figure></figure>
+              </div>
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-4"
+              >
+                <figure></figure>
+              </div>
+
+              <div class="variants__slide--card">
+                <figure></figure>
+              </div>
+              <div class="variants__slide--card">
+                <figure></figure>
+              </div>
+              <!--<div class="variants__slide--card">
+                <figure></figure>
+              </div>-->
+            </div>
+
+            <div class="variants__slide--item">
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-5"
+              >
+                <figure></figure>
+              </div>
+              <div
+                class="variants__slide--card-mobile variants__slide--card-mobile-6"
+              >
+                <figure></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="socialfeed">
+        <h2 class="socialfeed__h2">
+          Social feed
+        </h2>
+
+        <div class="socialfeed__boxes">
+          <div class="socialfeed__box socialfeed__box--instagram">
             <span>
               <svg>
                 <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
               </svg>
             </span>
           </div>
+          <div class="socialfeed__box socialfeed__box--twitter">
+            <span>
+              <svg>
+                <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
+              </svg>
+            </span>
+          </div>
         </div>
       </div>
-    </header>
 
-    <div class="slider">
-      <div class="slider__content">
-        <h2>
-          <span>The chief</span>
-          <span>is here</span>
+      <div class="locations">
+        <h2 class="locations__h2">
+          Find us
         </h2>
-        <span>
-          <button>Find your flavour</button>
-        </span>
-      </div>
-      <figure class="slider__slide slider__slide--1">
-        <img src="" alt="" />
-      </figure>
-      <figure class="slider__slide slider__slide--2">
-        <img src="" alt="" />
-      </figure>
-      <figure class="slider__slide slider__slide--3">
-        <img src="" alt="" />
-      </figure>
-    </div>
 
-    <div class="variants">
-      <h2 class="variants__h2">
-        Variants
-      </h2>
-
-      <div class="variants__navi variants__navi--left">
-        <span>
-          <svg>
-            <use xlink:href="../imgs/sprite.svg#icon-navigate_before"></use>
-          </svg>
-        </span>
-      </div>
-      <div class="variants__navi variants__navi--right">
-        <span>
-          <svg>
-            <use xlink:href="../imgs/sprite.svg#icon-navigate_next"></use>
-          </svg>
-        </span>
-      </div>
-
-      <div class="variants__sliderwrap">
-        <input
-          type="checkbox"
-          class="variants__mobilecheck"
-          id="mobile-variant-check"
-        />
-        <div class="variants__slide" id="variants-slide">
-          <div class="variants__slide--item">
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-1"
-            >
-              <figure></figure>
-
-              <div class="variants__slide--card-mobile-about">
-                <h2>
-                  <span>Cassava Chips</span>
-                  <span>Lightly salted</span>
-                </h2>
-                <a href="variants.html"
-                  ><button class="variants-button lightly-salted">
-                    View
-                  </button></a
-                >
-              </div>
+        <div class="locations__boxes">
+          <div class="locations__map" id="map-content">
+            <div class="locations__map--close" id="map-close">
+              <div class="locations__map--body" id="map"></div>
             </div>
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-2"
-            >
-              <figure></figure>
-
-              <div class="variants__slide--card-mobile-about">
-                <h2>
-                  <span>Cassava Chips</span>
-                  <span>Spicy pepper</span>
-                </h2>
-
-                <button class="variants-button spicy-pepper">View</button>
-              </div>
-            </div>
-
-            <div class="variants__slide--card variants__slide--card-1">
-              <figure></figure>
-              <div class="variants__slide--card-about">
-                <h2>
-                  <span>Cassava Chips</span>
-                  <span>Lightly salted</span>
-                </h2>
-
-                <a href="variants.html"
-                  ><button class="variants-button lightly-salted">
-                    View
-                  </button></a
-                >
-              </div>
-            </div>
-            <div class="variants__slide--card">
-              <figure></figure>
-
-              <div class="variants__slide--card-about">
-                <h2>
-                  <span>Cassava Chips</span>
-                  <span>Spicy pepper</span>
-                </h2>
-
-                <button class="variants-button spicy-pepper">View</button>
-              </div>
-            </div>
-            <!--<div class="variants__slide--card">
-              <figure></figure>
-            </div>-->
           </div>
 
-          <div class="variants__slide--item">
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-3"
-            >
-              <figure></figure>
-            </div>
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-4"
-            >
-              <figure></figure>
-            </div>
-
-            <div class="variants__slide--card">
-              <figure></figure>
-            </div>
-            <div class="variants__slide--card">
-              <figure></figure>
-            </div>
-            <!--<div class="variants__slide--card">
-              <figure></figure>
-            </div>-->
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Lagos
+            </p>
           </div>
-
-          <div class="variants__slide--item">
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-3"
-            >
-              <figure></figure>
-            </div>
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-4"
-            >
-              <figure></figure>
-            </div>
-
-            <div class="variants__slide--card">
-              <figure></figure>
-            </div>
-            <div class="variants__slide--card">
-              <figure></figure>
-            </div>
-            <!--<div class="variants__slide--card">
-              <figure></figure>
-            </div>-->
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Ibadan
+            </p>
           </div>
-
-          <div class="variants__slide--item">
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-5"
-            >
-              <figure></figure>
-            </div>
-            <div
-              class="variants__slide--card-mobile variants__slide--card-mobile-6"
-            >
-              <figure></figure>
-            </div>
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Oyo
+            </p>
+          </div>
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Ondo
+            </p>
+          </div>
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Portharcourt
+            </p>
+          </div>
+          <div class="locations__boxes--item">
+            <div class="locations__boxes--map"></div>
+            <p>
+              Kaduna
+            </p>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="socialfeed">
-      <h2 class="socialfeed__h2">
-        Social feed
-      </h2>
-
-      <div class="socialfeed__boxes">
-        <div class="socialfeed__box socialfeed__box--instagram">
-          <span>
+      <footer class="footer">
+        <span class="footer__header"><p>Follow us</p></span>
+        <span class="footer__svgs">
+          <span class="footer__svg">
+            <svg>
+              <use xlink:href="../imgs/sprite.svg#icon-facebook"></use>
+            </svg>
+          </span>
+          <span class="footer__svg">
             <svg>
               <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
             </svg>
           </span>
-        </div>
-        <div class="socialfeed__box socialfeed__box--twitter">
-          <span>
+          <span class="footer__svg">
             <svg>
-              <use xlink:href="../imgs/sprite.svg#icon-twitter"></use>
+              <use xlink:href="../img/sprite.svg#icon-twitter"></use>
             </svg>
           </span>
-        </div>
-      </div>
+        </span>
+      </footer>
     </div>
-
-    <div class="locations">
-      <h2 class="locations__h2">
-        Find us
-      </h2>
-
-      <div class="locations__boxes">
-        <div class="locations__map" id="map-content">
-          <div class="locations__map--close" id="map-close">
-            <div class="locations__map--body" id="map"></div>
-          </div>
-        </div>
-
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Lagos
-          </p>
-        </div>
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Ibadan
-          </p>
-        </div>
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Oyo
-          </p>
-        </div>
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Ondo
-          </p>
-        </div>
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Portharcourt
-          </p>
-        </div>
-        <div class="locations__boxes--item">
-          <div class="locations__boxes--map"></div>
-          <p>
-            Kaduna
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer">
-      <span class="footer__header"><p>Follow us</p></span>
-      <span class="footer__svgs">
-        <span class="footer__svg">
-          <svg>
-            <use xlink:href="../imgs/sprite.svg#icon-facebook"></use>
-          </svg>
-        </span>
-        <span class="footer__svg">
-          <svg>
-            <use xlink:href="../imgs/sprite.svg#icon-instagram"></use>
-          </svg>
-        </span>
-        <span class="footer__svg">
-          <svg>
-            <use xlink:href="../img/sprite.svg#icon-twitter"></use>
-          </svg>
-        </span>
-      </span>
-    </footer>
   </body>
 </html>

@@ -7,6 +7,7 @@
   position: relative;
   height: 60rem;
   margin-bottom: 2rem;
+  overflow: hidden;
 
   @include respond(phone) {
     height: 40rem;
@@ -58,6 +59,10 @@
       outline: none;
       text-transform: uppercase;
 
+      & a {
+        color: #fff;
+      }
+
       @include respond(phone) {
         padding: 1.5rem 2rem;
         font-size: 1.3rem;
@@ -70,17 +75,24 @@
   }
 
   &__slide {
+    transition: all 3s ease;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 3s ease;
     opacity: 0;
     z-index: 1;
+    backface-visibility: hidden;
+    overflow: hidden;
 
     @include backgroundImageStyle;
-    //background-size: contain
+
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
 
   &__slide--1 {
