@@ -251,3 +251,39 @@ variantBtns.forEach((btn) => {
     console.log(btn.classList);
   });
 });
+
+const findus_label = Array.from(
+  document.querySelectorAll(".locations__rectangles--label")
+);
+
+const findus_rect = Array.from(
+  document.querySelectorAll(".locations__rectangles--rect")
+);
+
+findus_rect.forEach((rect) => {
+  console.log(rect);
+
+  rect.addEventListener("click", function (e) {
+    e.stopPropagation();
+    Array.from(
+      document.querySelectorAll(".locations__rectangles--check")
+    ).forEach((item) => {
+      if (rect.classList.contains(item.id)) {
+        item.checked ? (item.checked = false) : (item.checked = true);
+      }
+
+      !rect.classList.contains(item.id) ? (item.checked = false) : "";
+    });
+  });
+});
+
+findus_label.forEach((label) => {
+  label.addEventListener("click", function (e) {
+    e.stopPropagation();
+    Array.from(
+      document.querySelectorAll(".locations__rectangles--check")
+    ).forEach((item) => {
+      !label.classList.contains(item.id) ? (item.checked = false) : "";
+    });
+  });
+});
