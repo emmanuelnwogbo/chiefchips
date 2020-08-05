@@ -15,7 +15,7 @@
   height: auto;
 
   @include respond(tab-land) {
-    min-height: 97rem;
+    min-height: 63rem;
   }
 
   @include respond(tab-port) {
@@ -24,7 +24,7 @@
 
   @include respond(phone) {
     padding: 5rem 1rem;
-    min-height: 80rem;
+    min-height: 50rem;
 
     background-image: url("../imgs/640x288map.jpg");
   }
