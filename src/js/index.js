@@ -5,7 +5,7 @@ import loadGoogleMapsApi from "load-google-maps-api";
 
 import "./variants";
 
-const mapItems = Array.from(
+/*const mapItems = Array.from(
   document.querySelectorAll(".locations__boxes--item")
 );
 
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Map.loadGoogleMapsApi().then(function (googleMaps) {
     Map.createMap(googleMaps, mapElement);
   });
-});
+});*/
 
 const slides = Array.from(document.querySelectorAll(".slider__slide"));
 const dropdownItems = Array.from(
