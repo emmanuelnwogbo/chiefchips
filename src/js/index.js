@@ -287,3 +287,28 @@ findus_label.forEach((label) => {
     });
   });
 });
+
+const footerSvgs = Array.from(document.querySelectorAll(".footer__svg"));
+const social_boxes = Array.from(document.querySelectorAll(".socialfeed__box"));
+
+footerSvgs.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (item.id !== undefined && item.id.length) {
+      const url = item.id;
+      var win = window.open(url, "_blank");
+      win.focus();
+    }
+  });
+});
+
+social_boxes.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (item.id !== undefined && item.id.length) {
+      const url = item.id;
+      var win = window.open(url, "_blank");
+      win.focus();
+    }
+  });
+});

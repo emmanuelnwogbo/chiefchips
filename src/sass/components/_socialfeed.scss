@@ -44,6 +44,8 @@
     position: relative;
     flex-basis: 45%;
     height: 43rem;
+    overflow: hidden;
+    cursor: pointer;
 
     @include respond(tab-land) {
       height: 45rem;
@@ -59,16 +61,29 @@
       flex-basis: 49%;
     }
 
+    & figure {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      z-index: 1;
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
     & span {
       position: absolute;
       top: 0;
       left: 0;
-      background: rgba(30, 39, 46, 0.9);
+      background: rgba(30, 39, 46, 0.4);
       height: 100%;
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      z-index: 2;
 
       & svg {
         fill: #fff;
