@@ -96,10 +96,10 @@
   }
 
   &__slide--1 {
-    background-image: url(../imgs/slider-1.jpg);
+    background-image: url(../imgs/slider-1-rework.jpg);
 
     @include respond(phone) {
-      background-image: url(../imgs/400x288.jpg);
+      background-image: url(../imgs/400x288-slider-3.jpg);
     }
   }
 

@@ -1,4 +1,5 @@
 .flavour {
+  
   &__directions {
     position: absolute;
     height: 100%;
@@ -8,6 +9,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    z-index: 3;
 
     @include respond(phone) {
       display: none;
@@ -17,6 +19,7 @@
       & svg {
         height: 7rem;
         width: 7rem;
+        fill: rgba(30, 39, 46, 0.5);
       }
     }
 
@@ -52,6 +55,7 @@
     padding: 3rem 8rem;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
 
     @include backgroundImageStyle;
 
@@ -68,6 +72,8 @@
 
   &__slider {
     min-height: calc(100vh - 26vh);
+    display: flex;
+    transition: all .3s ease-in;
 
     @include respond(tab-land) {
       min-height: 78vh;
@@ -80,6 +86,13 @@
     align-items: start;
     margin: 0 auto;
     background: #fee600;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    transition: all .1s ease-in;
+
+    &:not(:first-child) {
+      opacity: 0;
+    }
 
     @include respond(tab-land) {
       flex-direction: column;
@@ -124,7 +137,7 @@
 
       & h2 {
         position: relative;
-        font-size: 5rem;
+        font-size: 4rem;
         text-transform: uppercase;
         letter-spacing: 2px;
         padding: 0 0 2.5rem 0;
@@ -174,7 +187,7 @@
             @include respond(tab-land) {
               min-height: 65rem;
             }
-            
+
             @include respond(phone) {
               min-height: 48rem;
             }
@@ -285,7 +298,7 @@
       @include respond(tab-land) {
         font-size: 2.7rem;
       }
-      
+
       @include respond(phone) {
         font-size: 1.7rem;
       }
