@@ -118,9 +118,27 @@
       background-position: top;
       position: relative;
 
+      &-1 {
+        background-image: url(../imgs/light-salted-find-flavour.jpg);
+      }
+
+      &-2 {
+        background-image: url(../imgs/spicy-pepper-product-variant.jpg)
+      }
+
       @include respond(tab-land) {
         min-height: 38vh;
         width: 100%;
+      }
+
+      @include respond(phone) {
+        &-1 {
+          background-image: url(../imgs/light-salted-mobile.jpg);
+        }
+  
+        &-2 {
+          background-image: url(../imgs/spicypepper-product-mobile.jpg)
+        }
       }
     }
 
